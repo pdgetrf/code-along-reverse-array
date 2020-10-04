@@ -6,7 +6,7 @@ import static org.junit.Assert.assertArrayEquals;
 public class ProblemTest {
     @Test
     public void test() {
-        int inputs[][] = {
+        int[][] inputs = {
                 {},
                 {1},
                 {-2, 2},
@@ -16,7 +16,7 @@ public class ProblemTest {
                 {-4, -4, -4},
                 {-1, 0, 9, 3, 2}};
 
-        int expected[][] = {
+        int[][] expected = {
                 {},
                 {1},
                 {2, -2},
