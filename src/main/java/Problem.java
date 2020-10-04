@@ -5,9 +5,13 @@ public class Problem {
         }
 
         for (int i = 0; i < input.length / 2; i++) {
-            int tmp = input[i];
-            input[i] = input[input.length - 1 - i];
-            input[input.length - 1 - i] = tmp;
+            swap(input, i, input.length - 1 - i);
         }
+    }
+
+    private static void swap(int[] input, int i, int j) {
+        int tmp = input[i];
+        input[i] = input[j];
+        input[j] = tmp;
     }
 }
