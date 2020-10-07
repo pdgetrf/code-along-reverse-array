@@ -5,7 +5,7 @@ import static org.junit.Assert.assertArrayEquals;
 
 public class ProblemTest {
     @Test
-    public void test() {
+    public void groupTest() {
         int[][] inputs = {
                 {},
                 {1},
@@ -35,5 +35,32 @@ public class ProblemTest {
                 Assert.fail();
             }
         }
+    }
+
+    @Test
+    public void testUniqueNumbers() {
+        int[] data = {5, 1, 8, 3, -2, 9};
+        int[] expect = {9, -2, 3, 8, 1, 5};
+
+        Problem.reverseArray(data);
+        assertArrayEquals(expect, data);
+    }
+
+    @Test
+    public void testNonUniqueNumbers() {
+        int[] data = {3, 3, 3, 3, 3};
+        int[] expect = {3, 3, 3, 3, 3};
+
+        Problem.reverseArray(data);
+        assertArrayEquals(expect, data);
+    }
+
+    @Test
+    public void testSingleNumber() {
+        int[] data = {3};
+        int[] expect = {3};
+
+        Problem.reverseArray(data);
+        assertArrayEquals(expect, data);
     }
 }
