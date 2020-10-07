@@ -41,18 +41,14 @@ public class ProblemTest {
     public void testUniqueNumbers() {
         int[] data = {5, 1, 8, 3, -2, 9};
         int[] expect = {9, -2, 3, 8, 1, 5};
-
-        Problem.reverseArray(data);
-        assertArrayEquals(expect, data);
+        verify(data, expect);
     }
 
     @Test
     public void testNonUniqueNumbers() {
         int[] data = {3, 3, 3, 3, 3};
         int[] expect = {3, 3, 3, 3, 3};
-
-        Problem.reverseArray(data);
-        assertArrayEquals(expect, data);
+        verify(data, expect);
     }
 
     @Test
@@ -60,7 +56,12 @@ public class ProblemTest {
         int[] data = {3};
         int[] expect = {3};
 
+        verify(data, expect);
+    }
+
+    private void verify(int[] data, int[] expect) {
         Problem.reverseArray(data);
         assertArrayEquals(expect, data);
     }
+
 }
