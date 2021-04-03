@@ -28,12 +28,10 @@ public class ProblemTest {
 
         for (int i = 0; i < inputs.length; i++) {
             Problem.reverseArray(inputs[i]);
-            try {
-                assertArrayEquals(expected[i], inputs[i]);
-            } catch (AssertionError e) {
-                System.out.println("test case " + i + " failed: " + e);
-                Assert.fail();
-            }
+            assertArrayEquals(
+                    String.format("case %d failed:", i),
+                    expected[i],
+                    inputs[i]);
         }
     }
 
